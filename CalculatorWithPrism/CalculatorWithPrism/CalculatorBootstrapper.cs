@@ -2,6 +2,7 @@
 using Prism.Unity;
 using Microsoft.Practices.Unity;
 using Prism.Modularity;
+using SimpleCalculatorModule;
 
 namespace CalculatorWithPrism
 {
@@ -31,6 +32,15 @@ namespace CalculatorWithPrism
         protected override void InitializeShell()
         {
             Application.Current.MainWindow.Show();
+        }
+
+        /// <summary>
+        /// Configures the <see cref="T:Prism.Modularity.IModuleCatalog"/> used by Prism.
+        /// </summary>
+        protected override void ConfigureModuleCatalog()
+        {
+            var moduleCatalog = (ModuleCatalog) ModuleCatalog;
+            moduleCatalog.AddModule(typeof (SimpleCalculatorModuleInfo));
         }
     }
 }
