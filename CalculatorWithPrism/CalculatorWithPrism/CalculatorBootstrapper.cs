@@ -22,7 +22,7 @@ namespace CalculatorWithPrism
         /// </remarks>
         protected override DependencyObject CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<Views.MainWindow>();
         }
 
         /// <summary>
